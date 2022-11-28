@@ -1,4 +1,4 @@
-# final-project-justplastic
-final-project-justplastic created by GitHub Classroom
+# Plastic Waste and Policy Making
+## Aryan, Allison, Tzu and Megan
 
-Ideas for the final project
+### Ideas for the final project
