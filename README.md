@@ -19,6 +19,7 @@ Here we should try to make a guessing game with CSS and HTML like the examples P
 
 #### Graph 3 - Maps
 3 maps are done. Heavy tracing strokes on countries that you zoom into. Try to insert a tooltip if possible (currentky facing errors). But focus is not on the number, but the color, and the fact that two graphs are compliments of each other and two are similar. Order of the graphs should be Production (Blue), Mismanaged (Red), then Export (Green). Preferably in three tabs, so that it is easy to switch and tell a story. 
+Another way is to use the embedded maps from the source website, but that is not very good in the flow of the website maybe.
 
 #### Graph 4 - Photos and collage of news articles
 China and Turkey's policy changes. And more.
