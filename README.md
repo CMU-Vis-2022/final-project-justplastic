@@ -1,5 +1,5 @@
 # Plastic Waste and Policy Making
-### Team Members: Aryan, Allison, Tzu and Megan
+### Team Members: Aryan, Allison, Tzu-Sheng and Megan
 
 ### Ideas for the final project
 
