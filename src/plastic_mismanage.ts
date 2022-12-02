@@ -1,34 +1,34 @@
 
 // The svg
-var svg = d3.select("#viz_plastic_mismanage"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height");
+var svg2 = d3.select("#viz_plastic_mismanage"),
+  width = +svg2.attr("width"),
+  height = +svg2.attr("height");
 
 // Define the div for the tooltip
-var div = d3.select("body").append("div")	
+var div2 = d3.select("body").append("div")	
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
 // Map and projection
-var path = d3.geoPath();
-var projection = d3.geoEckert3()
+var path2 = d3.geoPath();
+var projection2 = d3.geoEckert3()
   .scale(175)
   .center([0,20])
   .translate([width / 2, height / 2]);
 
 // Data and color scale
-var data = d3.map();
-var colorScale = d3.scaleThreshold()
+var data2 = d3.map();
+var colorScale2 = d3.scaleThreshold()
   .domain([0, 1, 2.5, 5, 10, 20, 40, 80])
   .range(d3.schemeReds[7]);
 
 // Load external data and boot
 d3.queue()
   .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-  .defer(d3.csv, "https://raw.githubusercontent.com/aryanm1999/data-vis-data/main/mismanage.csv", function(d) { data.set(d.code, +d.pop); })
-  .await(ready);
+  .defer(d3.csv, "https://raw.githubusercontent.com/aryanm1999/data-vis-data/main/mismanage.csv", function(d) { data2.set(d.code, +d.pop); })
+  .await(ready2);
 
-function ready(error, topo) {
+function ready2(error, topo) {
 
   let mouseOver = function(d) {
     d3.selectAll(".Country")
@@ -63,19 +63,19 @@ function ready(error, topo) {
   }
 
   // Draw the map
-  svg.append("g")
+  svg2.append("g")
     .selectAll("path")
     .data(topo.features)
     .enter()
     .append("path")
       // draw each country
       .attr("d", d3.geoPath()
-        .projection(projection)
+        .projection(projection2)
       )
       // set the color of each country
       .attr("fill", function (d) {
-        d.total = data.get(d.id) || 0;
-        return colorScale(d.total);
+        d.total = data2.get(d.id) || 0;
+        return colorScale2(d.total);
       })
       .style("stroke", "transparent")
       .attr("class", function(d){ return "Country" } )

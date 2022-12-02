@@ -1,35 +1,35 @@
 
 
 // The svg
-var svg = d3.select("#viz_plastic_produce"),
-  width = +svg.attr("width"),
-  height = +svg.attr("height");
+var svg1 = d3.select("#viz_plastic_produce"),
+  width = +svg1.attr("width"),
+  height = +svg1.attr("height");
 
 // Define the div for the tooltip
-var div = d3.select("body").append("div")	
+var div1 = d3.select("body").append("div")	
     .attr("class", "tooltip")				
     .style("opacity", 0);
 
 // Map and projection
-var path = d3.geoPath();
-var projection = d3.geoEckert3()
+var path1 = d3.geoPath();
+var projection1 = d3.geoEckert3()
   .scale(175)
   .center([0,20])
   .translate([width / 2, height / 2]);
 
 // Data and color scale
-var data = d3.map();
-var colorScale = d3.scaleThreshold()
+var data1 = d3.map();
+var colorScale1 = d3.scaleThreshold()
   .domain([0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45 , 0.5])
   .range(d3.schemeBlues[9]);
 
 // Load external data and boot
 d3.queue()
   .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
-  .defer(d3.csv, "https://raw.githubusercontent.com/aryanm1999/data-vis-data/main/per-capita-person-day.csv", function(d) { data.set(d.code, +d.pop); })
-  .await(ready);
+  .defer(d3.csv, "https://raw.githubusercontent.com/aryanm1999/data-vis-data/main/per-capita-person-day.csv", function(d) { data1.set(d.code, +d.pop); })
+  .await(ready1);
 
-function ready(error, topo) {
+function ready1(error, topo) {
 
   let mouseOver = function(d) {
     d3.selectAll(".Country")
@@ -64,19 +64,19 @@ function ready(error, topo) {
   }
 
   // Draw the map
-  svg.append("g")
+  svg1.append("g")
     .selectAll("path")
     .data(topo.features)
     .enter()
     .append("path")
       // draw each country
       .attr("d", d3.geoPath()
-        .projection(projection)
+        .projection(projection1)
       )
       // set the color of each country
       .attr("fill", function (d) {
-        d.total = data.get(d.id) || 0;
-        return colorScale(d.total);
+        d.total = data1.get(d.id) || 0;
+        return colorScale1(d.total);
       })
       .style("stroke", "transparent")
       .attr("class", function(d){ return "Country" } )
