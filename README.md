@@ -24,3 +24,13 @@ Another way is to use the embedded maps from the source website, but that is not
 #### Graph 4 - Photos and collage of news articles
 China and Turkey's policy changes. And more.
 
+### Launch the app
+
+Install [node](https://nodejs.org/en/).
+
+```bash
+npm install
+npm run dev
+```
+
+When you push to GitHub, the app automatically deploys to GitHub Pages. As an example, this template repository is deployed at [domoritz.github.io/D3-App-Template](https://domoritz.github.io/D3-App-Template/). See `deploy.yml` for details. Make sure to update the `base` property in `vite.config.ts` to match your repo name.
