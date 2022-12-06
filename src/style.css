@@ -46,3 +46,11 @@ img {
   width: 100%;
   
 }
+
+.caption {
+  font-size: small;
+}
+
+.quote {
+  font-style: italic;
+}
