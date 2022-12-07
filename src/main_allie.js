@@ -9,7 +9,7 @@ import { graph } from './chart2';
 import { map } from './chart5';
 import { products } from './chart1'
 
-const policyData = await csv("src/policy_data.csv");
+const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policy_data.csv");
 
 function policy_desc(state) {
   const currentState = state;
