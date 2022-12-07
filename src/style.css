@@ -54,3 +54,54 @@ img {
 .quote {
   font-style: italic;
 }
+
+/* updates starting HERE */
+
+#map5 {
+  text-align: center;
+  border-width: 1px;
+  border-color: black;
+}
+
+#policy_div {
+  outline-width: 2px;
+  outline-color: black;
+}
+
+
+#policy_div table td, #policy_div table th {
+  border-width: 0px;
+  padding: 8px;
+  margin: 0px;
+}
+
+
+#policy_div table tr th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: teal;
+  color: white;
+}
+
+#policy_div table tr:nth-child(even){background-color: #f2f2f2;}
+
+#policy_div table {
+  width: 90%;
+  margin: auto;
+  transition: all 1s;
+}
+
+
+#policy_div table tr .citation {
+  width: 20%
+}
+
+
+#policy_div table tr .summary {
+  width: 80%
+}
+
+#policy_div {
+  text-align: center;
+}
