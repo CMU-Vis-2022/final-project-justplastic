@@ -10,7 +10,7 @@ import { map } from './chart5';
 import { products } from './chart1'
 // import { svg3chart } from "./test";
 
-const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policy_data.csv");
+const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policyData.csv");
 
 // const chart = svg3chart();
 
