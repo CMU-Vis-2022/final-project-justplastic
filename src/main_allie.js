@@ -8,8 +8,11 @@ import { Handler } from 'vega-tooltip';
 import { graph } from './chart2';
 import { map } from './chart5';
 import { products } from './chart1'
+// import { svg3chart } from "./test";
 
 const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policy_data.csv");
+
+// const chart = svg3chart();
 
 function policy_desc(state) {
   const currentState = state;
@@ -76,6 +79,7 @@ const run = async () => {
     document.getElementById("graph1").appendChild(await productsMarks.render());
     document.getElementById("graph2").appendChild(await graphMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());
+    // document.getElementById("viz_plastic_export").appendChild(chart.element);
     
 };
 run();
