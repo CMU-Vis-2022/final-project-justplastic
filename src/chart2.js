@@ -47,8 +47,10 @@ const recycledLine = vl.markLine({
     .height(300)
     .width(600);
 
+const chart2data = await csv("src/recycled_vs_produced.csv");
+
 export const graph = vl.layer(generatedArea, generatedLine, recycledLine)
     .resolve({"scale": {"y": "independent"}})
     .title("Plastic Waste Generation vs. Plastic Recycled (kilotons)")
-    .data(await csv("src/recycled_vs_produced.csv"))
+    .data(chart2data)
  ;
