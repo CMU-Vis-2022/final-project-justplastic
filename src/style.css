@@ -75,6 +75,12 @@ img {
   margin: 0px;
 }
 
+#policy_div table tr td {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: lightgray;
+}
+
 
 #policy_div table tr th {
   padding-top: 12px;
@@ -82,6 +88,11 @@ img {
   text-align: left;
   background-color: teal;
   color: white;
+
+
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: teal;
 }
 
 #policy_div table tr:nth-child(even){background-color: #f2f2f2;}
@@ -90,16 +101,23 @@ img {
   width: 90%;
   margin: auto;
   transition: all 1s;
+  border-bottom: 1px solid;
+  
+  border-color: lightgray;
+  border-collapse: collapse;
 }
 
 
 #policy_div table tr .citation {
-  width: 20%
+  width: 20%;
+  font-weight: bold;
 }
 
 
 #policy_div table tr .summary {
-  width: 80%
+  width: 80%;
+  text-align: left;
+  padding-left: 15px;
 }
 
 #policy_div {
