@@ -47,7 +47,8 @@ const recycledLine = vl.markLine({
     .height(300)
     .width(600);
 
-const chart2data = await csv("./src/recycledvsproduced.csv");
+//const chart2data = await csv("./src/recycledvsproduced.csv");
+const chart2data = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/recycledvsproduced.csv");
 
 export const graph = vl.layer(generatedArea, generatedLine, recycledLine)
     .resolve({"scale": {"y": "independent"}})
