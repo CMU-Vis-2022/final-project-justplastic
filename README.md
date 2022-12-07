@@ -24,6 +24,11 @@ Another way is to use the embedded maps from the source website, but that is not
 #### Graph 4 - Photos and collage of news articles
 China and Turkey's policy changes. And more.
 
+#### Accessibility
+1. Use of hue instead of multi-color legends - so color blind people can see the gradation
+2. Explanantion of every graph
+3. Use of color blind friendly colors
+
 ### Launch the app
 
 Install [node](https://nodejs.org/en/).
