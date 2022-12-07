@@ -7,10 +7,13 @@ import { csv } from 'd3';
 import { Handler } from 'vega-tooltip';
 import { graph } from './chart2';
 import { map } from './chart5';
-import { products } from './chart1'
+import { products } from './chart1';
+import { graph3a } from './chart3a';
 
 const policyData = await csv("src/policy_data.csv");
 
+
+// copy/paste this function:
 function policy_desc(state) {
   const currentState = state;
   if (document.getElementById("policy_div")){
@@ -59,15 +62,20 @@ vl.register(vega, vegaLite, {
     init: view => { view.tooltip(new Handler().call); }
   });
 
-// Generators.observe((notify) =>
+
+
+
 
 const run = async () => {
     const productsMarks = products
       .autosize({ type: 'fit', contains: 'padding' });
     const graphMarks = graph
       .autosize({ type: 'fit', contains: 'padding' });
+    const graph3aMarks = graph3a
+      .width(800).height(500)
     const mapMarks = map
       .autosize({ type: 'fit', contains: 'padding' })
+      // add this .view() method
       .view(addEventListener('click', function(event, item) {
         policy_desc(event.item.datum.properties.name);
       }));
@@ -75,7 +83,10 @@ const run = async () => {
 
     document.getElementById("graph1").appendChild(await productsMarks.render());
     document.getElementById("graph2").appendChild(await graphMarks.render());
+    document.getElementById("graph3a").appendChild(await graph3aMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());
+
+
     
 };
 run();
