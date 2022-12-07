@@ -4,7 +4,7 @@ import * as vl from 'vega-lite-api';
 const mapData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/map.csv");
 
 const facilities_fill = vl.markGeoshape({strokeWidth: 4})
-.data(vl.topojson('src/states-10m.json').feature('states'))
+.data(vl.topojson('https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/states-10m.json').feature('states'))
 .transform(
     vl.lookup('properties.name')
       .from(vl.data(mapData).key('State').fields(['Facilities per Million People', 'Ban_Preemption', 'State']))
