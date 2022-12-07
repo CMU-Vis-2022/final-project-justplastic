@@ -1,7 +1,7 @@
 import { csv, descending } from 'd3';
 import * as vl from 'vega-lite-api';
 
-const productData = await csv("src/graph1_data.csv");
+const productData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/graph1_data.csv");
 
 const graph = vl.markBar()
     .data(productData)

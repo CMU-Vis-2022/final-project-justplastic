@@ -1,7 +1,7 @@
 import { csv } from 'd3';
 import * as vl from 'vega-lite-api';
 
-const mapData = await csv("src/map.csv");
+const mapData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/map.csv");
 
 const facilities_fill = vl.markGeoshape({strokeWidth: 4})
 .data(vl.topojson('src/states-10m.json').feature('states'))
