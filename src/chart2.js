@@ -67,11 +67,11 @@ const rule = vl.markRule({
 
 const annotation = vl.markText({
     align: 'center',
-    dx: -52,
+    dx: -5,
     dy: -100,
     color: "red",
     fontSize: 12  })
-  .encode(vl.text().value("China Banned Waste Imports from the U.S. →") )
+  .encode(vl.text().value("Why the sudden change? →") )
   .height(300)
   .width(600);
 

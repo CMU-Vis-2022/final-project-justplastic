@@ -9,20 +9,68 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* color pallete here */
+  --powder_blue: #ADE1E5;
+  --bdazzled_blue: #3E5C79;
+  --dark_salmon: #DD9787;
+  --laurel_green: #A4B494;
 }
 
 html {
-  max-width: 100ch;
-  padding: 3em 1em;
-  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
   line-height: 1.75;
   font-size: 1.25em;
 }
 
+
 body {
   /* background-color: gray; */
-  font-family: 'Times New Roman', Times, serif;
+  /* font-family: 'Times New Roman', Times, serif; */
+  margin: 0px;
   /* text-align: center; */
+}
+
+#introduction {
+  background-color: var(--laurel_green);
+}
+
+h2 #plastic_powder {
+  color: var(--powder_blue);
+}
+
+header {
+  background-color: var(--bdazzled_blue);
+  width: 100vw;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  padding-left: 40px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+}
+header h4 {
+  margin-left: 30px;
+}
+
+#main {
+  margin: auto;
+  max-width: 80vw;
+  padding: 10px; 
+}
+
+#graph1_flex {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#main div {
+  padding: 20px;
 }
 
 #map5 path {

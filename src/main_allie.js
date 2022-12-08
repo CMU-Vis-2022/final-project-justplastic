@@ -90,7 +90,7 @@ const run = async () => {
 
     document.getElementById("graph1").appendChild(await productsMarks.render());
     document.getElementById("graph2").appendChild(await graphMarks.render());
-    // document.getElementById("graph3a").appendChild(await graph3aMarks.render());
+    document.getElementById("graph3a").appendChild(await graph3aMarks.render());
     // document.getElementById("graph3b").appendChild(await graph3bMarks.render());
     // document.getElementById("graph3c").appendChild(await graph3cMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());

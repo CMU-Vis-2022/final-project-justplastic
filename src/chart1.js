@@ -12,7 +12,6 @@ const graph = vl.markBar()
         vl.tooltip([{field: "perc_val", type: "nominal", title: "% of Total Plastic Contamination"}])
     )
     .width(600)
-    .title({text: "title", angle: 90})
 
 
 
