@@ -9,7 +9,7 @@ function hasVal(value) { return Object.values(graph3cData).includes(value) };
 // country data with codes from http://techslides.com/countries-and-capitals-with-d3-and-natural-earth <3
 
 const graph3c_fill = vl.markGeoshape({stroke: null, opacity: 1})
-    .data(vl.topojson('src/world-NE-10m.json').feature("countries"))
+    .data(vl.topojson('https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/world-NE-10m.json').feature("countries"))
     .transform(
         vl.lookup('id')
           .from(vl.data(graph3cData).key('code').fields(['country', 'code', 'pop']))
@@ -24,7 +24,7 @@ const graph3c_fill = vl.markGeoshape({stroke: null, opacity: 1})
 
 
 const graph3c_stroke = vl.markGeoshape({stroke: "lightgray", strokeWidth: 0.5, fill: "white"})
-.data(vl.topojson('src/world-NE-10m.json').feature("countries"))
+.data(vl.topojson('https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/world-NE-10m.json').feature("countries"))
 .project(vl.projection('equalEarth'))
 .encode(
     vl.tooltip().condition({
