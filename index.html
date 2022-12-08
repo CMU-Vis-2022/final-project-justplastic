@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="src/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./src/main_allie.js"></script>
     <title>Just Plastic</title>
   </head>
   <body>
@@ -27,18 +28,28 @@
         <p>So the question now is, what can the U.S. do to fight the growing, global issue that is plastic pollution?</p>
       </div>
       <!-- Chart 1 -->
-      <h2>What are the most commonly used plastic products in the U.S.?</h2>
-      <p>To better understand the problem, we have to first look at the produced products in the U.S. that provide the most contamination to the environment.</p>
-      <div id="graph1_flex">
+      <h2>What percentage of all environmental plastic contamination is created by the <strong>top 10</strong> plastic products?</h2>
+      <div id="slider_div">
+        <input id="slider" type="range" min="0" max="100" value="50">
+        <p id="guess"></p>
+      </div>
+      <button id="slider_button">See Solution</button>
+      <div id="slider_solution" class="hidden">
+        <p>To better understand the problem, we have to first look at the produced products in the U.S. that provide the most contamination to the environment.</p>
+         <div id="graph1_flex">
         <div>
           <div id="graph1"></div>
           <p class="caption">Figure 1. Through data collected by different organizations, the top 20 products that document environmental contamination by product types, from most to least. (Top 10 are shown here)</p>
         </div>
-        <p>Many campaigns and legislations regarding plastic pollution these days focus on specific plastic products. The Be Straw Free movement in 2018 mainly focused on straws, legislations are mainly focused on plastic bags, and while it is a step in the right direction, individual actions will not create the impact that this pressing problem needs. These products in the table are all single-use plastic products. Products that are not reusable or recyclable in any way. The ones shown in the table are mostly produced by specific companies, and so while the intentions of many campaigns are positive, it would take a substantial number of people to convince these companies to stop producing all that plastic waste. </p>  
-      </div>
-      
-      <!-- Chart 2 -->
-      <h2>But as long as we are recycling the proportional amount of plastic we generate, then it's ok, right?</h2>
+        <div id="graph1_flex_right">
+          <p class="tab">Many campaigns and legislations regarding plastic pollution these days focus on specific plastic products. The <span id="be_straw_free">Be Straw Free</span> movement in 2018 mainly focused on straws, legislations are mainly focused on plastic bags, and while it is a step in the right direction, individual actions will not create the impact that this pressing problem needs.</p>  
+        </div>
+       </div>
+       <p class="tab">These products in the table are all single-use plastic products. Products that are not reusable or recyclable in any way. The ones shown in the table are mostly produced by specific companies, and so while the intentions of many campaigns are positive, it would take a substantial number of people to convince these companies to stop producing all that plastic waste. </p>
+       <p>If we are focusing on single-use plastics, isn’t that a good direction since single plastics are WAY worse than reusable plastics?</p>
+       <p>In theory, yes…</p>
+       <!-- Chart 2 -->
+      <h2 id="graph2_heading">Unfortunately, the odds of a recyclable plastic product getting recycled is <i> shockingly</i> low…</h2>
       <p>When it comes to plastic waste generation, the United States comes out at the top, generating 37.83 million tons of waste, respectively in 2010, only second to China. In a congressionally mandated report, the U.S. was found to produce more plastic waste than all European Union member countries combined.</p>
       <p class="quote">"The U.S. is 4% of the world's population, yet it produces 14% of its plastic waste. The U.S. needs to play a much bigger role in addressing the global plastic pollution crisis." - Nick Mallos, a conservation biologist at Ocean Conservancy</p>
       <div id="graph2"></div>
@@ -79,27 +90,36 @@
       <h2>Then, is it sustainable for the U.S. to continually rely on plastic waste exporting?</h2>
       <p>No.</p>
       <br>
-      <img src="src/screenshots.jpeg">
+      <div id="above_news">
+        <h2>So, what happened in 2018?</h2>
+        <p>Let's take a look at some headliners from around the world:</p>
+      </div>
+      <img id="news" src="src/screenshots.jpeg">
+      <div id="below_news">
+        <p>Because of the disproportionate amounts of plastic waste that many countries in Asia have had import, many have been implementing policies that limit or complete bank plastic waste imports. Between 2010 to 2016, China imported on average 8 million tons of plastic from nations across the globe, with the U.S. being one of the main contributors, alongside Hong Kong and Japan. In the beginning, it was a win-win situation for China to import plastic, as they would be able to use the materials to create and manufacture goods, but with these benefits, the high amount of plastic waste led to many environmental repercussions.</p>
+        <p>In January 2018, China banned the imports of most plastics and other materials that were sent to China’s recycling processors. This policy is called the National Sword or Green Sword policy. It banned the importation of certain types of solid waste and set strict limits of contamination on the recyclable materials. These limits were a 24-item list of materials that would be prohibited from being imported into China, including post-consumer plastic scrap, types of unsorted paper, types of used textiles, and more. In 2019, China added another 16 materials that were prohibited from being imported.</p>
+        <p>Following China’s decision, Vietnam, Malaysia, Thailand, and many other countries have implemented their own regulations and bans on plastic waste imports. </p>
+        <p>These new policy bans explains why we can see in Graph 2 that there is a drop from 8% recycled to only 5-6% recycled.</p>
 
-      <p>Because of the disproportionate amounts of plastic waste that many countries in Asia have had import, many have been implementing policies that limit or complete bank plastic waste imports. Between 2010 to 2016, China imported on average 8 million tons of plastic from nations across the globe, with the U.S. being one of the main contributors, alongside Hong Kong and Japan. In the beginning, it was a win-win situation for China to import plastic, as they would be able to use the materials to create and manufacture goods, but with these benefits, the high amount of plastic waste led to many environmental repercussions.</p>
-      <p>In January 2018, China banned the imports of most plastics and other materials that were sent to China's recycling processors. This policy is called the National Sword or Green Sword policy. It banned the importation of certain types of solid waste and set strict limits of contamination on the recyclable materials. These limits were a 24-item list of materials that would be prohibited from being imported into China, including post-consumer plastic scrap, types of unsorted paper, types of used textiles, and more. In 2019, China added another 16 materials that were prohibited from being imported.</p>
-      <p>Following China's decision, Vietnam, Malaysia, Thailand, and many other countries have implemented their own regulations and bans on plastic waste imports. </p>
-      <p>These new policy bans explains why we can see in Graph 2 that there is a drop from 8% recycled to only 5-6% recycled.</p>
-
+      </div>
+      
       <!-- Chart 5 -->
-      <h2>What should the U.S. do now?</h2>
+      <h2>The Effect of Policy on Plastic Waste</h2>
       <p>Many states already have plastic ban policies in place already. States with these policies have proven that they work, that the amount of plastic that is generated and used by residents of that state are less than states without these plastic ban legislations.</p>
       <div id="map5"></div>
-      <p class="caption">Figure 6. Colored map of states that have implemented a plastic ban or tax, states that have enacted a preemptive ban, and states with no plastic ban legislations. Hover over or click different states to reveal more information.</p>
+      <p class="caption">Figure 6. Colored map of states that have implemented a plastic ban or tax, states that have enacted a preemptive ban, and states with no plastic ban legislations. Hover over and click different states to reveal more information.</p>
+      <p>The map shows the number of plastic producing facilities in the state, ones that are darker have more facilities while states shaded in a lighter color have less facilities. We have researched whether the states have implemented plastic bans or taxes, enacted a preemptive ban, or if they have no plastic ban legislations at all. Comparing the states with plastic bans, many of those states seem to have less plastic producing facilities as well. For example, Maine is one of the states with the least plastic producing facilities and there are 3 legislations regarding plastic bans implemented.</p>
       <p>To do our part in society, we can manage our plastic waste better by simply producing and using less. However, to address this issue at large, we need the government to intervene, implementing plastic bans or taxes across the country. The U.S. cannot rely only on other countries to solve the plastic waste problem, we need preventative measures of our own.</p>
 
       <h2>Plastic waste will harm us. Use less plastic. Advocate for more plastic bans.</h2>
+
+      </div>
+      
     </div>
     
 
     <!-- Scripts for Charts -->
     <!-- <script type="module" src="/src/main.ts"></script> -->
-    <script type="module" src="./src/main_allie.js"></script>
     <!-- <script src="src/plastic_produce.ts"></script>
     <script src="src/plastic_mismanage.ts"></script>
     <script src="src/plastic_export.ts"></script> -->

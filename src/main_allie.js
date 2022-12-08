@@ -11,12 +11,17 @@ import { products } from './chart1'
 import { graph3a } from './chart3a';
 import { graph3b } from './chart3b';
 import { graph3c } from './chart3c';
+import { doc } from 'prettier';
 
 // import { svg3chart } from "./test";
 
 const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policyData.csv");
 
 // const chart = svg3chart();
+
+let width = window.innerWidth;
+window.onresize = width = window.innerWidth;
+
 
 function policy_desc(state) {
   const currentState = state;
@@ -66,13 +71,31 @@ vl.register(vega, vegaLite, {
     init: view => { view.tooltip(new Handler().call); }
   });
 
+const slider = document.getElementById("slider");
+const guess = document.getElementById("guess");
+guess.innerText = slider.value;
+
+slider.oninput = function() {
+  guess.innerHTML = this.value;
+}
+
+const slider_button = document.getElementById("slider_button");
+slider_button.addEventListener("click", sliderSolution())
+
+function sliderSolution() {
+  console.log("hi");
+  const div = document.getElementById("slider_solution");
+  div.classList.remove("hidden")
+}
+
+console.log(document.getElementById("slider").value)
 // Generators.observe((notify) =>
 
 const run = async () => {
     const productsMarks = products
-      .autosize({ type: 'fit', contains: 'padding' });
+      .width(0.3 * width);
     const graphMarks = graph
-      .autosize({ type: 'fit', contains: 'padding' });
+    .autosize({ type: 'fit', contains: 'padding' })
     const graph3aMarks = graph3a
       .width(800).height(500);
     const graph3bMarks = graph3b

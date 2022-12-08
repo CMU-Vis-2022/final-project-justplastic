@@ -15,7 +15,17 @@
   --bdazzled_blue: #3E5C79;
   --dark_salmon: #DD9787;
   --laurel_green: #A4B494;
+  --raw_sienna: #D38B5D;
+  --shiny_shamrock: #74A57F;
+  --davys_gray: #605B56;
+  --desert_sand: #E4C5AF;
+  --gold_crayola: #EDC085;
+  --green_sheen: #7AB89C;
+
+
+  --border_radius: 15px
 }
+
 
 html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -26,14 +36,16 @@ html {
 
 
 body {
-  /* background-color: gray; */
+  /* background-color: var(--powder_blue); */
   /* font-family: 'Times New Roman', Times, serif; */
   margin: 0px;
   /* text-align: center; */
+  
 }
 
 #introduction {
   background-color: var(--laurel_green);
+  border-radius: var(--border_radius);
 }
 
 h2 #plastic_powder {
@@ -61,6 +73,15 @@ header h4 {
   margin: auto;
   max-width: 80vw;
   padding: 10px; 
+  background-color: white;
+}
+
+.tab {
+  text-indent: 40px;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #graph1_flex {
@@ -68,9 +89,33 @@ header h4 {
   flex-direction: row;
 }
 
+#slider_div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#slider_div p{
+  margin-left: 30px
+}
+
+#graph1_flex_right {
+  background-color: var(--powder_blue);
+  align-self: center;
+}
+
+#graph2_heading {
+  background-color: var(--laurel_green);
+  padding: 20px;
+  border-radius: var(--border_radius);
+}
 
 #main div {
   padding: 20px;
+}
+
+#be_straw_free {
+  color: var(--davys_gray)
 }
 
 #map5 path {
@@ -101,6 +146,7 @@ img {
 
 .caption {
   font-size: small;
+  margin-top: 0px;
 }
 
 .quote {
@@ -120,6 +166,18 @@ img {
   outline-color: black;
 }
 
+#slider_div {
+  width: 100%;
+  text-align: center;
+}
+
+#slider {
+width: 80%;
+/* -webkit-appearance: none;
+appearance: none;
+} */
+}
+
 
 #policy_div table td, #policy_div table th {
   border-width: 0px;
@@ -133,18 +191,32 @@ img {
   border-color: lightgray;
 }
 
+#above_news {
+  padding: 20px;
+  background-color: var(--dark_salmon);
+}
+
+#below_news {
+  background-color: var(--dark_salmon);
+}
 
 #policy_div table tr th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: teal;
+  background-color: var(--davys_gray);
   color: white;
 
 
   border-left: 1px solid;
   border-right: 1px solid;
-  border-color: teal;
+  border-color: var(--davys_gray);
+}
+
+#news {
+  width: 100vw;
+  transform: translate(-10vw, 0px);
+  margin-right: -15vw;
 }
 
 #policy_div table tr:nth-child(even){background-color: #f2f2f2;}

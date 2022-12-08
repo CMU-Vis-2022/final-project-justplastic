@@ -30,7 +30,7 @@ const generatedLine = vl.markLine({
         vl.y().fieldQ('waste in msw (thousand tons)')
             .scale({domain:[0,60000]})
             .axis(null),
-        vl.color().value("teal")
+        vl.color().value("#D38B5D")
     )
     .height(300)
     .width(600);
@@ -45,7 +45,7 @@ const recycledLine = vl.markLine({
             .scale({domain:[0,6000]})
             .axis({orient: "left"})
             .title(" "),
-        vl.color().value("navy")
+        vl.color().value("#74A57F")
     )
     .height(300)
     .width(600);
@@ -54,7 +54,7 @@ const recycledLine = vl.markLine({
 
 console.log(chart2data);
 const rule = vl.markRule({
-    color: "red",
+    color: "#605B56",
     strokeWidth: 2,
     strokeDash: [8,4]
 })
@@ -69,7 +69,7 @@ const annotation = vl.markText({
     align: 'center',
     dx: -5,
     dy: -100,
-    color: "red",
+    color: "#605B56",
     fontSize: 12  })
   .encode(vl.text().value("Why the sudden change? →") )
   .height(300)
@@ -79,7 +79,7 @@ const annotation = vl.markText({
     align: 'center',
     dx: 0,
     dy: -292,
-    color: "teal",
+    color: "#D38B5D",
     angle: 90,
     fontSize: 11,
     fontWeight: "bold"
@@ -92,7 +92,7 @@ const annotation = vl.markText({
     align: 'center',
     dx: -1,
     dy: -285,
-    color: "navy",
+    color: "#74A57F",
     angle: 270,
     fontSize: 11,
     fontWeight: "bold"
