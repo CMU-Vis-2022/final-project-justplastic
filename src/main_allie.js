@@ -114,11 +114,11 @@ const run = async () => {
     const graphMarks = graph
     .autosize({ type: 'fit', contains: 'padding' })
     const graph3aMarks = graph3a
-      .width(800).height(500);
+      .width(800).height(400);
     const graph3bMarks = graph3b
-      .width(800).height(500);
+      .width(800).height(400);
     const graph3cMarks = graph3c
-      .width(800).height(500);
+      .width(800).height(400);
     const mapMarks = map
       .autosize({ type: 'fit', contains: 'padding' })
       .view(

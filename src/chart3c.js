@@ -16,11 +16,11 @@ const graph3c_fill = vl.markGeoshape({stroke: null, opacity: 1})
       )
     //   domain: [0, 0.5, 1, 2.5, 5, 10,100], 
     .encode(
-        // vl.tooltip([{field : "country", title: "Country"}, {field: "pop", title: "Exports"}]),
-        vl.color().fieldQ('pop').scale({type: "sqrt", domain: [0,40], scheme: "greens"}).legend({"title": {"value": "Exports?", "angle": 90}}),
+        vl.tooltip([{field : "country", title: "Country"}, {field: "pop", title: "Exports (kg/person/day)"}]),
+        vl.color().fieldQ('pop').scale({type: "sqrt", domain: [0,40], scheme: "greens"}).legend({"title": {"value": "Exports", "angle": 90}}),
     )
     .project(vl.projection('equalEarth'))
-    .title('Per capita plastic waste (kg/person/day) by Country');
+    .title('Plastic Waste Exports per Person by Country');
 
 
 const graph3c_stroke = vl.markGeoshape({stroke: "lightgray", strokeWidth: 0.5, fill: "white"})
@@ -29,8 +29,8 @@ const graph3c_stroke = vl.markGeoshape({stroke: "lightgray", strokeWidth: 0.5, f
 .encode(
     vl.tooltip().condition({
         "test": `${hasVal("datum['id']")} == true`,
-        "value": "yuh"
-    }).value("no")
+        "value": 0
+    }).value(null)
     // [{field : "id", title: "Country"}]),
 );
 export const graph3c = vl.layer(graph3c_stroke, graph3c_fill);
