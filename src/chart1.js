@@ -9,7 +9,7 @@ const graph = vl.markBar()
         vl.x().fieldQ("perc_val").title(" "),
         // Percent of Total Plastic Contamination
         vl.y().fieldN("product").sort(null).title("Product"),
-        vl.color().fieldQ("perc_val").legend({title: {value: " "}}).scale({range: ["#ADE1E5", "#3E5C79"]}),
+        vl.color().fieldQ("perc_val").legend({title: {value: " "}}).scale({range: ["#E4C5AF", "#DD9787"]}),
         vl.tooltip([{field: "perc_val", type: "nominal", title: "% of Total Plastic Contamination"}])
     )
 

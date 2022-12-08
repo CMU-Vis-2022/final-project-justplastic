@@ -22,6 +22,25 @@ const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/fin
 let width = window.innerWidth;
 window.onresize = width = window.innerWidth;
 
+const slider = document.getElementById("slider");
+const guess = document.getElementById("guess");
+guess.innerHTML = `${slider.value}%`;
+
+slider.oninput = function() {
+  guess.innerHTML = `${this.value}%`;
+}
+
+function reveal(id) {
+  let div = document.getElementById(id);
+  console.log(div.classList);
+  div.classList.remove("hidden");
+};
+
+function writeAnswer() {
+  let answer = document.getElementById("answer");
+  answer.innerHTML = `You answered ${slider.value}%. In reality, 83.6% of all environmental plastic contamination is created by the industries of only <span style="color: #DD9787">10 products.</span?`
+}
+
 
 function policy_desc(state) {
   const currentState = state;
@@ -71,25 +90,23 @@ vl.register(vega, vegaLite, {
     init: view => { view.tooltip(new Handler().call); }
   });
 
-const slider = document.getElementById("slider");
-const guess = document.getElementById("guess");
-guess.innerText = slider.value;
 
-slider.oninput = function() {
-  guess.innerHTML = this.value;
-}
 
-const slider_button = document.getElementById("slider_button");
-slider_button.addEventListener("click", sliderSolution())
 
-function sliderSolution() {
-  console.log("hi");
-  const div = document.getElementById("slider_solution");
-  div.classList.remove("hidden")
-}
+// let slider_solution = document.getElementById("slider_solution");
 
-console.log(document.getElementById("slider").value)
-// Generators.observe((notify) =>
+
+// slider_solution.setAttribute("class", "hidden")
+
+
+// console.log(document.getElementById("slider").value)
+// // Generators.observe((notify) =>
+
+// function test() {
+//   console.log("hiii");
+// }
+
+
 
 const run = async () => {
     const productsMarks = products
@@ -104,11 +121,11 @@ const run = async () => {
       .width(800).height(500);
     const mapMarks = map
       .autosize({ type: 'fit', contains: 'padding' })
-      .view(
-        addEventListener('click', function(event, item) {
-          policy_desc(event.item.datum.properties.name);
-        })
-        );
+      // .view(
+      //   addEventListener('click', function(event, item) {
+      //     policy_desc(event.item.datum.properties.name);
+      //   })
+      //   );
 
 
     document.getElementById("graph1").appendChild(await productsMarks.render());
@@ -118,6 +135,13 @@ const run = async () => {
     // document.getElementById("graph3c").appendChild(await graph3cMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());
     // document.getElementById("viz_plastic_export").appendChild(chart.element);
+
+
+    let slider_button = document.getElementById("slider_button");
+    slider_button.addEventListener("click", function() { reveal("slider_reveal"); writeAnswer()});
+
+    let above_graph2_button = document.getElementById("above_graph2_button");
+    above_graph2_button.addEventListener("click", reveal("above_graph2_reveal"));
     
 };
 run();
