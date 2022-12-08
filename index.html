@@ -36,23 +36,23 @@
           <p id="guess"></p>
         </div>
         <div class="button_div">
-          <button id="slider_button">See Solution</button>
+          <button onmouseover="return false" id="slider_button">See Solution</button>
         </div>
         <div id="slider_reveal" class="hidden">
           <h3 id="answer"></h3>
           <div id="graph1_flex">
-         <div>
-           <div id="graph1"></div>
-           <p class="caption">Figure 1. Through data collected by different organizations, the top 20 products that document environmental contamination by product types, from most to least. (Top 10 are shown here)</p>
-         </div>
-         <div id="graph1_flex_right">
-           <p class="tab">These products in the table are all single-use plastic products. Products that are not reusable or recyclable in any way. The ones shown in the table are mostly produced by specific companies, and so while the intentions of many campaigns are positive, it would take a substantial number of people to convince these companies to stop producing all that plastic waste.</p>  
-         </div>
-        </div>
-        <p class="tab">Many campaigns and legislations regarding plastic pollution these days focus on specific plastic products. The <span id="be_straw_free">Be Straw Free</span> movement in 2018 mainly focused on straws, legislations are mainly focused on plastic bags, and while it is a step in the right direction, individual actions will not create the impact that this pressing problem needs.</p>
-        <p>If we are focusing on single-use plastics, isn’t that a good direction since single plastics are WAY worse than reusable plastics?</p>
-        <p>In theory, yes…</p>
-        <button id="above_graph2_button">BUT... >>></button>
+            <div>
+              <div id="graph1"></div>
+              <p class="caption">Figure 1. Through data collected by different organizations, the top 20 products that document environmental contamination by product types, from most to least. (Top 10 are shown here)</p>
+            </div>
+            <div id="graph1_flex_right">
+              <p class="tab">These products in the table are all single-use plastic products. Products that are not reusable or recyclable in any way. The ones shown in the table are mostly produced by specific companies, and so while the intentions of many campaigns are positive, it would take a substantial number of people to convince these companies to stop producing all that plastic waste.</p>  
+            </div>
+          </div>
+          <p class="tab">Many campaigns and legislations regarding plastic pollution these days focus on specific plastic products. The <span id="be_straw_free">Be Straw Free</span> movement in 2018 mainly focused on straws, legislations are mainly focused on plastic bags, and while it is a step in the right direction, individual actions will not create the impact that this pressing problem needs.</p>
+          <p>If we are focusing on single-use plastics, isn’t that a good direction since single plastics are WAY worse than reusable plastics?</p>
+          <p>In theory, yes…</p>
+          <button id="above_graph2_button">BUT... >>></button>
         </div>
       </div>
       
@@ -61,7 +61,7 @@
         <div id="unfortunately">
           <h2 id="graph2_heading">Unfortunately, the odds of a recyclable plastic product getting recycled is <i><span id="shockingly">shockingly</span></i> low…</h2>
           <p>When it comes to plastic waste generation, the United States comes out at the top, generating 37.83 million tons of waste, respectively in 2010, only second to China. In a congressionally mandated report, the U.S. was found to produce more plastic waste than all European Union member countries combined.</p>
-          <p class="quote">"The U.S. is 4% of the world's population, yet it produces 14% of its plastic waste. The U.S. needs to play a much bigger role in addressing the global plastic pollution crisis." - Nick Mallos, a conservation biologist at Ocean Conservancy</p>
+          <p class="quote" style="padding-bottom: 30px">"The U.S. is 4% of the world's population, yet it produces 14% of its plastic waste. The U.S. needs to play a much bigger role in addressing the global plastic pollution crisis." - Nick Mallos, a conservation biologist at Ocean Conservancy</p>
         </div>
         <div id="graph2"></div>
         <div id="after_graph2">
@@ -70,43 +70,54 @@
           <p><span style="font-weight:bold">But what happened in 2018?</span> The disparity between the amount of plastic waste generated and the amount of plastic recycled increases greatly. There is around a 3% drop in the percentage of plastic waste recycled from 8% to 5-6% between 2018-2019. The amount of plastic waste that is recycled in those years does not have a significant difference, but the amount of plastic waste we generate, meaning the amount of plastic waste that ends up in landfills increases a considerable amount. This raises the question, why?</p>
         
         </div>
+        <div id="graph3_header">
+          <h2>If our plastic is not being recycled in the U.S., where is our plastic waste going?</h2>
+          <p> Looking at plastic waste from a global perspective...</p>
+        </div>
         
         <!-- Chart 3 -->
-        <h2>If our plastic is not being recycled in the U.S., where is our plastic waste going?</h2>
-        <p> Looking at plastic waste from a global perspective...</p>
+        
         <div id="blue">
           <div class="middle">
             <div id="graph3a"></div>
             <p class="caption" style="text-align: center">Figure 3. This measures the total plastic wasted that is generated by each country around the world. </p>
           </div>
-          
+        </div>
+        <div id="red">
+          <div class="middle">
+            <h3>Mismanged plastic waste per capita</h3>
+            <div id="graph3b"></div>
+            <p class="caption" style="text-align: center">Figure 4. This measures the amount of plastic waste that is mismanaged within the country.</p>
+            <p>There is an interesting pattern that occurs between both maps. They are complementary. The countries that produce the most amount of plastic waste are NOT the ones mismanaging the waste. </p>
+
+            <p><span style="font-weight:bold">Why is that?</span> Do countries producing the most amount of plastic have good policies to manage plastic waste? Is it because the countries that are producing the most amount of plastic know how to dispose of it safely? </p>
+
+            <h2>Or is it because they are able to dump it onto others?</h2>
+            <p>This will help us further analyze how policies affect plastic mismanagement.</p>
+          </div>
+        </div>
+        <div id="green">
+          <div class="middle">  
+            <h3>Plastic waste exports per capita</h3>
+            <div id="graph3c"></div>
+            <p class="caption" style="text-align: center">Figure 5. This measures the amount of plastic waste each country exports.</p>
+            <p>In 2018, about ⅓ of U.S. plastic waste that was to be recycled was exported out of the country, and of those exports, 78% were sent to countries that have poor waste management. These countries don't have the infrastructure or regulation to process and recycle the plastic waste that the U.S. exports yearly.</p>
+          </div>
+        </div>
+      
+        <div id="but_why">
+          <p id="question">But why does the U.S. do this?</p>
+          <p id="reason">Jan Dell, the founder of Last Beach Clean Up - a nonprofit organization dedicated to tell the public facts about plastic pollution, tells us that “[The U.S. doesn't] have factories to do it.” The U.S. is not capable of handling the amount of plastic waste that is generated every year, but despite the lack of facilities and resources, the plastic waste that is generated in the U.S. increased five-fold from 1980 to 2018.</p>
+
         </div>
         
-        <h3>Mismanged plastic waste per capita</h3>
-        <!-- <svg id="viz_plastic_mismanage" width="800" height="400"></svg> -->
-        <div id="graph3b"></div>
-        <p class="caption" style="text-align: center">Figure 4. This measures the amount of plastic waste that is mismanaged within the country.</p>
-        <p>There is an interesting pattern that occurs between both maps. They are complementary. The countries that produce the most amount of plastic waste are NOT the ones mismanaging the waste. </p>
-
-        <p><span style="font-weight:bold">Why is that?</span> Do countries producing the most amount of plastic have good policies to manage plastic waste? Is it because the countries that are producing the most amount of plastic know how to dispose of it safely? </p>
-
-        <h2>Or is it because they are able to dump it onto others?</h2>
-        <p>This will help us further analyze how policies affect plastic mismanagement.</p>
-        <h3>Plastic waste exports per capita</h3>
-        <!-- <svg id="viz_plastic_export" width="800" height="400"></svg> -->
-        <div id="graph3c"></div>
-        <p class="caption" style="text-align: center">Figure 5. This measures the amount of plastic waste each country exports.</p>
-
-        <p>In 2018, about ⅓ of U.S. plastic waste that was to be recycled was exported out of the country, and of those exports, 78% were sent to countries that have poor waste management. These countries don't have the infrastructure or regulation to process and recycle the plastic waste that the U.S. exports yearly.</p>
-        <p>But why does the U.S. do this?</p>
-        <p>Jan Dell, the founder of Last Beach Clean Up - a nonprofit organization dedicated to tell the public facts about plastic pollution, tells us that “[The U.S. doesn't] have factories to do it.” The U.S. is not capable of handling the amount of plastic waste that is generated every year, but despite the lack of facilities and resources, the plastic waste that is generated in the U.S. increased five-fold from 1980 to 2018.</p>
-
         <!-- Chart 4 -->
         <h2>Then, is it sustainable for the U.S. to continually rely on plastic waste exporting?</h2>
-        <p>No.</p>
-        <br>
+        <button id="no_button">No.</button>
+      </div>
+      <div id="no_reveal" class="hidden">
         <div id="above_news">
-          <h2>So, what happened in 2018?</h2>
+          <h2>So, why did <i>our</i> recycling numbers change in 2018?</h2>
           <p>Let's take a look at some headliners from around the world:</p>
         </div>
         <img id="news" src="src/screenshots.jpeg">
@@ -119,23 +130,34 @@
         </div>
         
         <!-- Chart 5 -->
-        <h2>The Effect of Policy on Plastic Waste</h2>
-        <p>Many states already have plastic ban policies in place already. States with these policies have proven that they work, that the amount of plastic that is generated and used by residents of that state are less than states without these plastic ban legislations.</p>
-        <div id="map5"></div>
-        <p class="caption">Figure 6. Colored map of states that have implemented a plastic ban or tax, states that have enacted a preemptive ban, and states with no plastic ban legislations. Hover over and click different states to reveal more information.</p>
-        <p>The map shows the number of plastic producing facilities in the state, ones that are darker have more facilities while states shaded in a lighter color have less facilities. We have researched whether the states have implemented plastic bans or taxes, enacted a preemptive ban, or if they have no plastic ban legislations at all. Comparing the states with plastic bans, many of those states seem to have less plastic producing facilities as well. For example, Maine is one of the states with the least plastic producing facilities and there are 3 legislations regarding plastic bans implemented.</p>
-        <p>To do our part in society, we can manage our plastic waste better by simply producing and using less. However, to address this issue at large, we need the government to intervene, implementing plastic bans or taxes across the country. The U.S. cannot rely only on other countries to solve the plastic waste problem, we need preventative measures of our own.</p>
-
-        <h2>Plastic waste will harm us. Use less plastic. Advocate for more plastic bans.</h2>
+        <div id="policy">
+          <h2>The Effect of Policy on Plastic Waste</h2>
+          <p>Many states already have plastic ban policies in place already. States with these policies have proven that they work, that the amount of plastic that is generated and used by residents of that state are less than states without these plastic ban legislations.</p>
+          <div id="map5"></div>
+          <p class="caption">Figure 6. Colored map of states that have implemented a plastic ban or tax, states that have enacted a preemptive ban, and states with no plastic ban legislations. Hover over and click different states to reveal more information.</p>
+          <p>The map shows the number of plastic producing facilities in the state, ones that are darker have more facilities while states shaded in a lighter color have less facilities. We have researched whether the states have implemented plastic bans or taxes, enacted a preemptive ban, or if they have no plastic ban legislations at all. Comparing the states with plastic bans, many of those states seem to have less plastic producing facilities as well. For example, Maine is one of the states with the least plastic producing facilities and there are 3 legislations regarding plastic bans implemented.</p>
+          <p>To do our part in society, we can manage our plastic waste better by simply producing and using less. However, to address this issue at large, we need the government to intervene, implementing plastic bans or taxes across the country. The U.S. cannot rely only on other countries to solve the plastic waste problem, we need preventative measures of our own.</p>
+        </div>
+        
+        <h2>Join the Fight Against Plastic Pollution.</h2>
+        <h3>Sign petitions:</h3>
+        <ul>
+          <li>Pass the Plastic Pollution Reduction Act in CA: https://www.change.org/p/california-state-senate-pass-the-plastic-pollution-reduction-act</li>
+          <li>Ban plastic waste in Pennsylvania: https://www.change.org/p/pennsylvania-state-house-ban-plastic-waste </li>
+          <li>Other petitions: https://www.plasticpollutioncoalition.org/takeaction/petitions </li>
+        </ul>
+        <h3>Join a community & Raise awareness:</h3>
+        <ul>
+          <li>Clean 4 Change: https://clean4change.org/?s=get-involved-form</li>
+          <li>Plastic Pollution Coalition: https://www.plasticpollutioncoalition.org/coalition/join</li>
+        </ul>
+          
       </div>
     </div>
     
 
-    <!-- Scripts for Charts -->
-    <!-- <script type="module" src="/src/main.ts"></script> -->
-    <!-- <script src="src/plastic_produce.ts"></script>
-    <script src="src/plastic_mismanage.ts"></script>
-    <script src="src/plastic_export.ts"></script> -->
-    
+   <footer>
+      <h1>JustPlastic</h1>
+   </footer>
   </body>
 </html>

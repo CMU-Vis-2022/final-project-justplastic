@@ -121,27 +121,30 @@ const run = async () => {
       .width(800).height(500);
     const mapMarks = map
       .autosize({ type: 'fit', contains: 'padding' })
-      // .view(
-      //   addEventListener('click', function(event, item) {
-      //     policy_desc(event.item.datum.properties.name);
-      //   })
-      //   );
+      .view(
+        addEventListener('click', function(event, item) {
+          policy_desc(event.item.datum.properties.name);
+        })
+        );
 
 
     document.getElementById("graph1").appendChild(await productsMarks.render());
     document.getElementById("graph2").appendChild(await graphMarks.render());
     document.getElementById("graph3a").appendChild(await graph3aMarks.render());
-    // document.getElementById("graph3b").appendChild(await graph3bMarks.render());
-    // document.getElementById("graph3c").appendChild(await graph3cMarks.render());
+    document.getElementById("graph3b").appendChild(await graph3bMarks.render());
+    document.getElementById("graph3c").appendChild(await graph3cMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());
     // document.getElementById("viz_plastic_export").appendChild(chart.element);
 
 
     let slider_button = document.getElementById("slider_button");
-    slider_button.addEventListener("click", function() { reveal("slider_reveal"); writeAnswer()});
+    slider_button.addEventListener("click", function() { writeAnswer(); reveal("slider_reveal"); });
 
     let above_graph2_button = document.getElementById("above_graph2_button");
-    above_graph2_button.addEventListener("click", reveal("above_graph2_reveal"));
+    above_graph2_button.addEventListener("click", function() { reveal("above_graph2_reveal")});
+
+    let no_button = document.getElementById("no_button");
+    no_button.addEventListener("click", function() { reveal("no_reveal")});
     
 };
 run();

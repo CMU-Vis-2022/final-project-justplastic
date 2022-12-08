@@ -22,7 +22,7 @@ const facilities_fill = vl.markGeoshape({strokeWidth: 4})
     }
 ])
 .encode(
-    vl.color().fieldQ("Facilities per Million People").scale({type: 'pow', exponent: 0.4, scheme: ["beige", "#605B56"]}).legend({"direction": "vertical"}),
+    vl.color().fieldQ("Facilities per Million People").scale({type: 'pow', exponent: 0.4, scheme: ["white", "#D38B5D"]}).legend({"direction": "vertical"}),
     vl.tooltip().condition([
         {
             "test": "datum['Ban_Preemption'] == '1'",
