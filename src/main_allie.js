@@ -8,6 +8,10 @@ import { Handler } from 'vega-tooltip';
 import { graph } from './chart2';
 import { map } from './chart5';
 import { products } from './chart1'
+import { graph3a } from './chart3a';
+import { graph3b } from './chart3b';
+import { graph3c } from './chart3c';
+
 // import { svg3chart } from "./test";
 
 const policyData = await csv("https://raw.githubusercontent.com/CMU-Vis-2022/final-project-justplastic/main/src/policyData.csv");
@@ -69,15 +73,26 @@ const run = async () => {
       .autosize({ type: 'fit', contains: 'padding' });
     const graphMarks = graph
       .autosize({ type: 'fit', contains: 'padding' });
+    const graph3aMarks = graph3a
+      .width(800).height(500);
+    const graph3bMarks = graph3b
+      .width(800).height(500);
+    const graph3cMarks = graph3c
+      .width(800).height(500);
     const mapMarks = map
       .autosize({ type: 'fit', contains: 'padding' })
-      .view(addEventListener('click', function(event, item) {
-        policy_desc(event.item.datum.properties.name);
-      }));
+      .view(
+        addEventListener('click', function(event, item) {
+          policy_desc(event.item.datum.properties.name);
+        })
+        );
 
 
     document.getElementById("graph1").appendChild(await productsMarks.render());
     document.getElementById("graph2").appendChild(await graphMarks.render());
+    // document.getElementById("graph3a").appendChild(await graph3aMarks.render());
+    // document.getElementById("graph3b").appendChild(await graph3bMarks.render());
+    // document.getElementById("graph3c").appendChild(await graph3cMarks.render());
     document.getElementById("map5").appendChild(await mapMarks.render());
     // document.getElementById("viz_plastic_export").appendChild(chart.element);
     

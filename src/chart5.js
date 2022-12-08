@@ -46,7 +46,7 @@ const facilities_fill = vl.markGeoshape({strokeWidth: 4})
         "legend": null,
         "scale": {
             "domain": ["0", "1", "2"],
-            "range": ["gray", "green", "red"]
+            "range": ["gray", "green", "#FCD12A"]
         }
     }).value(null)
     

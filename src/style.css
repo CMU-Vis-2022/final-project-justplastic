@@ -25,6 +25,10 @@ body {
   /* text-align: center; */
 }
 
+#map5 path {
+  cursor: pointer;
+}
+
 h3 {
   text-align: center;
 }
