@@ -38,7 +38,7 @@ function reveal(id) {
 
 function writeAnswer() {
   let answer = document.getElementById("answer");
-  answer.innerHTML = `You answered ${slider.value}%. In reality, 83.6% of all environmental plastic contamination is created by the industries of only <span style="color: #DD9787">10 products.</span?`
+  answer.innerHTML = `You answered ${slider.value}%. In reality, <u style= "font-size: 50px; color: #3E5C79">83.6%</u> of all environmental plastic contamination is created by the industries of only <span style="color: #DD9787">10 products.</span?`
 }
 
 
@@ -79,9 +79,15 @@ function policy_desc(state) {
       table_rowNumber++;
     }
   }
+  
   div_title.innerText = state;
   policy_div.appendChild(div_title);
   policy_div.appendChild(table);
+  if (table_rowNumber == 0) {
+    let noLegislation = document.createElement("p");
+    noLegislation.innerHTML = "No Plastic Bag Legislation";
+    policy_div.appendChild(noLegislation);
+  }
   document.getElementById("map5").appendChild(policy_div);
 };
 
@@ -110,7 +116,7 @@ vl.register(vega, vegaLite, {
 
 const run = async () => {
     const productsMarks = products
-      .width(0.3 * width);
+      .width(0.35 * width);
     const graphMarks = graph
     .autosize({ type: 'fit', contains: 'padding' })
     const graph3aMarks = graph3a

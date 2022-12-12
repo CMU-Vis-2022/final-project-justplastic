@@ -17,7 +17,7 @@ const graph3c_fill = vl.markGeoshape({stroke: null, opacity: 1})
     //   domain: [0, 0.5, 1, 2.5, 5, 10,100], 
     .encode(
         vl.tooltip([{field : "country", title: "Country"}, {field: "pop", title: "Exports (kg/person/day)"}]),
-        vl.color().fieldQ('pop').scale({type: "sqrt", domain: [0,40], scheme: "greens"}).legend({"title": {"value": "Exports", "angle": 90}}),
+        vl.color().fieldQ('pop').scale({type: "sqrt", domain: [0,40], scheme: "greens"}).legend({"title": {"value": "Exports (kg/person/day)", "angle": 90}}),
     )
     .project(vl.projection('equalEarth'))
     .title('Plastic Waste Exports per Person by Country');
