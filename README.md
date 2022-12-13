@@ -1,35 +1,17 @@
-# Plastic Waste and Policy Making
-### Team Members: Aryan, Allison, Tzu-Sheng and Megan
+# Just Plastic! Plastic Waste and Policy Making
+### Team Members: Aryan Mehra, Allison Feldman, Tzu-Sheng Kuo, and Megan Yim
 
-### Ideas for the final project
+### Demo Link: https://cmu-vis-2022.github.io/final-project-justplastic
 
-#### Tips for the team
-1. Please push code, pictures and narrative updates regularly (Everyone)
-2. Try to make games - scrolling on the final HTML page (Aryan, Allison and Tzu)
-3. Coming up with healthy and smooth transitions and going through covering all of Prof. Dom's points and the marking scheme (Megan)
-4. Going through https://parametric.press/issue-02/ and https://parametric.press/issue-02/streaming/ and other examples shared by Prof. Dom.
-5. Making the webpage more accessible (10 marks): Try making a  toggle switch with different color schemes for the color blind.
-6. Interactivity: Inserting highlights, tooltips, scrolling functions as much as we can. 
+### Paper Link: [PDF file](https://drive.google.com/file/d/1sYMyUw1_NNVrGLDt51pYX1pjfLyhXVoc/view?usp=share_link)
 
-#### Graph 1 - Bar Chart
-Showing what plastic products are most popular and combining them with clipart and pictures of those products.
+### Video Link: [YouTube player](https://drive.google.com/file/d/15Z6YCxWAUgjif7z-d4D_VrIfi-YGBrcn/view?usp=sharing)
 
-#### Graph 2 - Single Use/ Recyclable Statistic for Plastic Over Time
-Here we should try to make a guessing game with CSS and HTML like the examples Professor Dom shard with us.
+### Abstract:
 
-#### Graph 3 - Maps
-3 maps are done. Heavy tracing strokes on countries that you zoom into. Try to insert a tooltip if possible (currentky facing errors). But focus is not on the number, but the color, and the fact that two graphs are compliments of each other and two are similar. Order of the graphs should be Production (Blue), Mismanaged (Red), then Export (Green). Preferably in three tabs, so that it is easy to switch and tell a story. 
-Another way is to use the embedded maps from the source website, but that is not very good in the flow of the website maybe.
+Plastic use is a very present problem, and single use plastics account for a significant chunk of the pollutants. Through this narrative project, we try to visualize facts and misconceptions related to plastic pollution in the U.S., and relate them to policies in different states and from around the world. Our project is unique in that it tackles a very wide problem and yet is able to engage the reader with interactivity (tooltips and guessing games), anomaly detection (line chart patterns of plastic production and recycling in US through time), hypothesis verification (global map chloropleths and news articles), and finally brings the story full circle, while leaving the reader to explore plastic legislation in their on state. We thus attempt to create a holistic narration around plastic contamination and its relation with policy making and legislation, both locally and globally, and leave the reader with a call to action.
 
-#### Graph 4 - Photos and collage of news articles
-China and Turkey's policy changes. And more.
-
-#### Accessibility
-1. Use of hue instead of multi-color legends - so color blind people can see the gradation
-2. Explanantion of every graph
-3. Use of color blind friendly colors
-
-### Launch the app
+### Running instruction
 
 Install [node](https://nodejs.org/en/).
 
@@ -38,4 +20,8 @@ npm install
 npm run dev
 ```
 
-When you push to GitHub, the app automatically deploys to GitHub Pages. As an example, this template repository is deployed at [domoritz.github.io/D3-App-Template](https://domoritz.github.io/D3-App-Template/). See `deploy.yml` for details. Make sure to update the `base` property in `vite.config.ts` to match your repo name.
+### Work breakdown
+- Aryan Mehra: brainstorm, find sources, implement world map chloropleth, write report
+- Allison Feldman: brainstorm, find sources, implement all charts and css, write report
+- Tzu-Sheng Kuo: brainstorm, find sources, implement website integration, write report
+- Megan Yim: brainstorm, find sources, make presentation slides, write report
