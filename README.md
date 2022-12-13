@@ -7,7 +7,7 @@
 
 #### Video Link: [YouTube player](https://drive.google.com/file/d/15Z6YCxWAUgjif7z-d4D_VrIfi-YGBrcn/view?usp=sharing)
 
-#### Summary Image
+#### Summary Image:
 ![Screenshots of all of our charts](/images/summaryimage.png)
 
 #### Abstract:
